@@ -8,9 +8,9 @@ export default function HomePage() {
     return (
         <div id="top" className="flex min-h-screen flex-col bg-neutral-100">
             <Navbar nav_links={[
-                {label: "SACC 2025", href: "#event"},
-                {label: "Sponsors", href: "#sponsors"},
-                {label: "About Us", href: "#about"}
+                {label: "SACC 2025", href: "/sacc"},
+                {label: "Sponsors", href: "/sponsors"},
+                {label: "About Us", href: "/about-us"}
             ]}/>
             <main className="flex flex-1 flex-col">
                 <HeroSection/>
