@@ -1,6 +1,8 @@
 import type {Metadata} from "next";
 
 import "~/styles/globals.css";
+import {Navbar} from "~/components/navbar";
+import {Footer} from "~/components/footer";
 
 const title = "SACO | SACC 2025";
 const description =
@@ -40,7 +42,13 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html lang="en">
         <body className="min-h-screen bg-white text-neutral-900 antialiased">
+        <Navbar nav_links={[
+            {label: "SACC 2025", href: "/sacc"},
+            {label: "Sponsors", href: "/sponsors"},
+            {label: "About Us", href: "/about-us"}
+        ]}/>
         {children}
+        <Footer/>
         </body>
         </html>
     );

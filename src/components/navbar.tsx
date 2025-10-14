@@ -67,7 +67,7 @@ export const Navbar = ({nav_links}: { nav_links: NavLink[] }) => {
 
     return (
         <header className="sticky top-0 z-30 border-b border-neutral-200 bg-white">
-            <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-10">
+            <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-10">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3">
                     <Image src="/logo.svg" alt="logo" width={30} height={30}/>
@@ -106,10 +106,11 @@ export const Navbar = ({nav_links}: { nav_links: NavLink[] }) => {
             </div>
 
             {/* Mobile dropdown */}
+            {/* TODO: Fix Mobile Menu display */}
             <div
                 id="mobile-menu"
                 className={cn(
-                    "sm:hidden overflow-hidden border-t border-neutral-200 bg-white transition-[max-height,opacity] duration-300 ease-out",
+                    "sm:hidden overflow-hidden border-t border-neutral-200 bg-white transition-[max-height,opacity] duration-300 ease-out absolute",
                     open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 )}
             >
